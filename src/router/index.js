@@ -17,6 +17,7 @@ import Log from '@/pages/Elderly/Log'
 import Custody from '@/pages/Elderly/Custody'
 import Server from '@/pages/Elderly/Server'
 import Relative from '@/pages/Elderly/Relative'
+import DoctorList from '@/pages/Elderly/DoctorList'
 
 // 健康信息表
 import HealthyInfoLists from '@/components/HealthyInfo/HealthyInfoLists'	//列表
@@ -48,7 +49,8 @@ import AlertSetting from '@/components/CustodyInfo/AlertSetting'	//警报设置
 import ServerInfo from '@/components/Server/ServerInfo'	//服务列表
 import ServerRecord from '@/components/Server/ServerRecord'	//预定记录
 
-
+//家庭医生
+import DoctorListS from '@/pages/Elderly/DoctorListS'
 
 
 
@@ -228,6 +230,20 @@ export default new Router({
 			]
 		},
 		{path:'/relative',component:Relative},
+		{
+			path: '/doctorList',
+			component:DoctorList,
+			children:[
+				{
+					path:'',
+					redirect:'/doctorList/doctorListS'
+				},
+				{
+					path:'doctorListS',
+					component:DoctorListS
+				}
+			]
+		},
 		
 		
 		

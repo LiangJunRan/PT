@@ -25,28 +25,40 @@
 				<el-table-column
 					prop="userName"
 					label="姓名"
+					width="80"
 					align=center>
 				</el-table-column>
 				
 				<el-table-column
 					prop="title"
-					label="标题"
-					width="120"
+					label="咨询主题"
+					width="180"
 					align=center>
 				</el-table-column>
 				
 				<el-table-column
-					prop="PolicePosition"
-					label="最大值"
+					prop="SymptomDescribe"
+					label="症状描述"
+					
+					align=center>
+				</el-table-column>
+				
+				<el-table-column
+					prop="SendTime"
+					label="咨询时间"
 					width="150"
 					align=center>
 				</el-table-column>
 				
 				<el-table-column
-					prop="PoliceTime"
-					label="最小值"
+					prop="ReplyType"
+					label="回复状态"
 					width="150"
 					align=center>
+					<div slot-scope="scope" style="height:23px;line-height: 23px;" >
+						<el-button v-if="(scope.row.ReplyType)"  type="text" size="small">已回复</el-button>
+						<el-button v-else style="color:red;"  type="text" size="small">未回复</el-button>
+					</div>
 				</el-table-column>
 	
 				<el-table-column
@@ -84,185 +96,285 @@ export default{
 				AlertSetList:[
 					{
 						id:1,
-						PoliceName:'低密度脂蛋白胆固醇',
-						Unit:'mmol/L',
-						PolicePosition:'2.22',
-						PoliceTime:'3.12'
+						userName:'老人',
+						title:'慢性支气管炎',
+						SymptomDescribe:'多年患有慢性支气管炎',
+						SendTime:'2018-06-26 03:49:50',
+						ReplyType:0,
+						ReplyTime:'2018-06-26 12:49:50',
+						ReplyContent:'回复内容',
+						ReplyEvaluate:3
 					},{
 						id:2,
-						PoliceName:'体温',
-						Unit:'℃',
-						PolicePosition:'35.8',
-						PoliceTime:'37.0'
+						userName:'老人',
+						title:'慢性支气管炎',
+						SymptomDescribe:'多年患有慢性支气管炎',
+						SendTime:'2018-06-26 03:49:50',
+						ReplyType:1,
+						ReplyTime:'2018-06-26 12:49:50',
+						ReplyContent:'回复内容',
+						ReplyEvaluate:3
 					},{
 						id:3,
-						PoliceName:'尿酸',
-						Unit:'umol/L',
-						PolicePosition:'90.0',
-						PoliceTime:'420.0'
+						userName:'老人',
+						title:'慢性支气管炎',
+						SymptomDescribe:'多年患有慢性支气管炎',
+						SendTime:'2018-06-26 03:49:50',
+						ReplyType:0,
+						ReplyTime:'2018-06-26 12:49:50',
+						ReplyContent:'回复内容',
+						ReplyEvaluate:3
 					},{
 						id:4,
-						PoliceName:'心率',
-						Unit:'次/分钟',
-						PolicePosition:'60.0',
-						PoliceTime:'120.0'
+						userName:'老人',
+						title:'慢性支气管炎',
+						SymptomDescribe:'多年患有慢性支气管炎',
+						SendTime:'2018-06-26 03:49:50',
+						ReplyType:1,
+						ReplyTime:'2018-06-26 12:49:50',
+						ReplyContent:'回复内容',
+						ReplyEvaluate:3
 					},{
 						id:5,
-						PoliceName:'总胆固醇',
-						Unit:'mmol/L',
-						PolicePosition:'2.9',
-						PoliceTime:'5.17'
+						userName:'老人',
+						title:'慢性支气管炎',
+						SymptomDescribe:'多年患有慢性支气管炎',
+						SendTime:'2018-06-26 03:49:50',
+						ReplyType:0,
+						ReplyTime:'2018-06-26 12:49:50',
+						ReplyContent:'回复内容',
+						ReplyEvaluate:3
 					},{
 						id:6,
-						PoliceName:'低密度脂蛋白胆固醇',
-						Unit:'mmol/L',
-						PolicePosition:'2.22',
-						PoliceTime:'3.12'
+						userName:'老人',
+						title:'慢性支气管炎',
+						SymptomDescribe:'多年患有慢性支气管炎',
+						SendTime:'2018-06-26 03:49:50',
+						ReplyType:0,
+						ReplyTime:'2018-06-26 12:49:50',
+						ReplyContent:'回复内容',
+						ReplyEvaluate:3
 					},{
 						id:7,
-						PoliceName:'体温',
-						Unit:'℃',
-						PolicePosition:'35.8',
-						PoliceTime:'37.0'
+						userName:'老人',
+						title:'慢性支气管炎',
+						SymptomDescribe:'多年患有慢性支气管炎',
+						SendTime:'2018-06-26 03:49:50',
+						ReplyType:0,
+						ReplyTime:'2018-06-26 12:49:50',
+						ReplyContent:'回复内容',
+						ReplyEvaluate:3
 					},{
 						id:8,
-						PoliceName:'尿酸',
-						Unit:'umol/L',
-						PolicePosition:'90.0',
-						PoliceTime:'420.0'
+						userName:'老人',
+						title:'慢性支气管炎',
+						SymptomDescribe:'多年患有慢性支气管炎',
+						SendTime:'2018-06-26 03:49:50',
+						ReplyType:0,
+						ReplyTime:'2018-06-26 12:49:50',
+						ReplyContent:'回复内容',
+						ReplyEvaluate:3
 					},{
 						id:9,
-						PoliceName:'心率',
-						Unit:'次/分钟',
-						PolicePosition:'60.0',
-						PoliceTime:'120.0'
+						userName:'老人',
+						title:'慢性支气管炎',
+						SymptomDescribe:'多年患有慢性支气管炎',
+						SendTime:'2018-06-26 03:49:50',
+						ReplyType:0,
+						ReplyTime:'2018-06-26 12:49:50',
+						ReplyContent:'回复内容',
+						ReplyEvaluate:3
 					},{
 						id:10,
-						PoliceName:'总胆固醇',
-						Unit:'mmol/L',
-						PolicePosition:'2.9',
-						PoliceTime:'5.17'
+						userName:'老人',
+						title:'慢性支气管炎',
+						SymptomDescribe:'多年患有慢性支气管炎',
+						SendTime:'2018-06-26 03:49:50',
+						ReplyType:0,
+						ReplyTime:'2018-06-26 12:49:50',
+						ReplyContent:'回复内容',
+						ReplyEvaluate:3
 					},{
 						id:11,
-						PoliceName:'低密度脂蛋白胆固醇',
-						Unit:'mmol/L',
-						PolicePosition:'2.22',
-						PoliceTime:'3.12'
+						userName:'老人',
+						title:'慢性支气管炎',
+						SymptomDescribe:'多年患有慢性支气管炎',
+						SendTime:'2018-06-26 03:49:50',
+						ReplyType:0,
+						ReplyTime:'2018-06-26 12:49:50',
+						ReplyContent:'回复内容',
+						ReplyEvaluate:3
 					},{
 						id:12,
-						PoliceName:'体温',
-						Unit:'℃',
-						PolicePosition:'35.8',
-						PoliceTime:'37.0'
+						userName:'老人',
+						title:'慢性支气管炎',
+						SymptomDescribe:'多年患有慢性支气管炎',
+						SendTime:'2018-06-26 03:49:50',
+						ReplyType:0,
+						ReplyTime:'2018-06-26 12:49:50',
+						ReplyContent:'回复内容',
+						ReplyEvaluate:3
 					},{
 						id:13,
-						PoliceName:'尿酸',
-						Unit:'umol/L',
-						PolicePosition:'90.0',
-						PoliceTime:'420.0'
+						userName:'老人',
+						title:'慢性支气管炎',
+						SymptomDescribe:'多年患有慢性支气管炎',
+						SendTime:'2018-06-26 03:49:50',
+						ReplyType:0,
+						ReplyTime:'2018-06-26 12:49:50',
+						ReplyContent:'回复内容',
+						ReplyEvaluate:3
 					},{
 						id:14,
-						PoliceName:'心率',
-						Unit:'次/分钟',
-						PolicePosition:'60.0',
-						PoliceTime:'120.0'
+						userName:'老人',
+						title:'慢性支气管炎',
+						SymptomDescribe:'多年患有慢性支气管炎',
+						SendTime:'2018-06-26 03:49:50',
+						ReplyType:0,
+						ReplyTime:'2018-06-26 12:49:50',
+						ReplyContent:'回复内容',
+						ReplyEvaluate:3
 					},{
 						id:15,
-						PoliceName:'总胆固醇',
-						Unit:'mmol/L',
-						PolicePosition:'2.9',
-						PoliceTime:'5.17'
+						userName:'老人',
+						title:'慢性支气管炎',
+						SymptomDescribe:'多年患有慢性支气管炎',
+						SendTime:'2018-06-26 03:49:50',
+						ReplyType:0,
+						ReplyTime:'2018-06-26 12:49:50',
+						ReplyContent:'回复内容',
+						ReplyEvaluate:3
 					},{
 						id:16,
-						PoliceName:'低密度脂蛋白胆固醇',
-						Unit:'mmol/L',
-						PolicePosition:'2.22',
-						PoliceTime:'3.12'
+						userName:'老人',
+						title:'慢性支气管炎',
+						SymptomDescribe:'多年患有慢性支气管炎',
+						SendTime:'2018-06-26 03:49:50',
+						ReplyType:0,
+						ReplyTime:'2018-06-26 12:49:50',
+						ReplyContent:'回复内容',
+						ReplyEvaluate:3
 					},{
 						id:17,
-						PoliceName:'体温',
-						Unit:'℃',
-						PolicePosition:'35.8',
-						PoliceTime:'37.0'
+						userName:'老人',
+						title:'慢性支气管炎',
+						SymptomDescribe:'多年患有慢性支气管炎',
+						SendTime:'2018-06-26 03:49:50',
+						ReplyType:0,
+						ReplyTime:'2018-06-26 12:49:50',
+						ReplyContent:'回复内容',
+						ReplyEvaluate:3
 					},{
 						id:18,
-						PoliceName:'尿酸',
-						Unit:'umol/L',
-						PolicePosition:'90.0',
-						PoliceTime:'420.0'
+						userName:'老人',
+						title:'慢性支气管炎',
+						SymptomDescribe:'多年患有慢性支气管炎',
+						SendTime:'2018-06-26 03:49:50',
+						ReplyType:0,
+						ReplyTime:'2018-06-26 12:49:50',
+						ReplyContent:'回复内容',
+						ReplyEvaluate:3
 					},{
 						id:19,
-						PoliceName:'心率',
-						Unit:'次/分钟',
-						PolicePosition:'60.0',
-						PoliceTime:'120.0'
+						userName:'老人',
+						title:'慢性支气管炎',
+						SymptomDescribe:'多年患有慢性支气管炎',
+						SendTime:'2018-06-26 03:49:50',
+						ReplyType:0,
+						ReplyTime:'2018-06-26 12:49:50',
+						ReplyContent:'回复内容',
+						ReplyEvaluate:3
 					},{
 						id:20,
-						PoliceName:'总胆固醇',
-						Unit:'mmol/L',
-						PolicePosition:'2.9',
-						PoliceTime:'5.17'
+						userName:'老人',
+						title:'慢性支气管炎',
+						SymptomDescribe:'多年患有慢性支气管炎',
+						SendTime:'2018-06-26 03:49:50',
+						ReplyType:0,
+						ReplyTime:'2018-06-26 12:49:50',
+						ReplyContent:'回复内容',
+						ReplyEvaluate:3
 					},{
 						id:21,
-						PoliceName:'低密度脂蛋白胆固醇',
-						Unit:'mmol/L',
-						PolicePosition:'2.22',
-						PoliceTime:'3.12'
+						userName:'老人',
+						title:'慢性支气管炎',
+						SymptomDescribe:'多年患有慢性支气管炎',
+						SendTime:'2018-06-26 03:49:50',
+						ReplyType:0,
+						ReplyTime:'2018-06-26 12:49:50',
+						ReplyContent:'回复内容',
+						ReplyEvaluate:3
 					},{
 						id:22,
-						PoliceName:'体温',
-						Unit:'℃',
-						PolicePosition:'35.8',
-						PoliceTime:'37.0'
+						userName:'老人',
+						title:'慢性支气管炎',
+						SymptomDescribe:'多年患有慢性支气管炎',
+						SendTime:'2018-06-26 03:49:50',
+						ReplyType:0,
+						ReplyTime:'2018-06-26 12:49:50',
+						ReplyContent:'回复内容',
+						ReplyEvaluate:3
 					},{
 						id:23,
-						PoliceName:'尿酸',
-						Unit:'umol/L',
-						PolicePosition:'90.0',
-						PoliceTime:'420.0'
+						userName:'老人',
+						title:'慢性支气管炎',
+						SymptomDescribe:'多年患有慢性支气管炎',
+						SendTime:'2018-06-26 03:49:50',
+						ReplyType:0,
+						ReplyTime:'2018-06-26 12:49:50',
+						ReplyContent:'回复内容',
+						ReplyEvaluate:3
 					},{
 						id:24,
-						PoliceName:'心率',
-						Unit:'次/分钟',
-						PolicePosition:'60.0',
-						PoliceTime:'120.0'
+						userName:'老人',
+						title:'慢性支气管炎',
+						SymptomDescribe:'多年患有慢性支气管炎',
+						SendTime:'2018-06-26 03:49:50',
+						ReplyType:0,
+						ReplyTime:'2018-06-26 12:49:50',
+						ReplyContent:'回复内容',
+						ReplyEvaluate:3
 					},{
 						id:25,
-						PoliceName:'总胆固醇',
-						Unit:'mmol/L',
-						PolicePosition:'2.9',
-						PoliceTime:'5.17'
+						userName:'老人',
+						title:'慢性支气管炎',
+						SymptomDescribe:'多年患有慢性支气管炎',
+						SendTime:'2018-06-26 03:49:50',
+						ReplyType:0,
+						ReplyTime:'2018-06-26 12:49:50',
+						ReplyContent:'回复内容',
+						ReplyEvaluate:3
 					},{
 						id:26,
-						PoliceName:'低密度脂蛋白胆固醇',
-						Unit:'mmol/L',
-						PolicePosition:'2.22',
-						PoliceTime:'3.12'
+						userName:'老人',
+						title:'慢性支气管炎',
+						SymptomDescribe:'多年患有慢性支气管炎',
+						SendTime:'2018-06-26 03:49:50',
+						ReplyType:0,
+						ReplyTime:'2018-06-26 12:49:50',
+						ReplyContent:'回复内容',
+						ReplyEvaluate:3
 					},{
 						id:27,
-						PoliceName:'体温',
-						Unit:'℃',
-						PolicePosition:'35.8',
-						PoliceTime:'37.0'
+						userName:'老人',
+						title:'慢性支气管炎',
+						SymptomDescribe:'多年患有慢性支气管炎',
+						SendTime:'2018-06-26 03:49:50',
+						ReplyType:0,
+						ReplyTime:'2018-06-26 12:49:50',
+						ReplyContent:'回复内容',
+						ReplyEvaluate:3
 					},{
 						id:28,
-						PoliceName:'尿酸',
-						Unit:'umol/L',
-						PolicePosition:'90.0',
-						PoliceTime:'420.0'
-					},{
-						id:29,
-						PoliceName:'心率',
-						Unit:'次/分钟',
-						PolicePosition:'60.0',
-						PoliceTime:'120.0'
-					},{
-						id:30,
-						PoliceName:'总胆固醇',
-						Unit:'mmol/L',
-						PolicePosition:'2.9',
-						PoliceTime:'5.17'
-					}
+						userName:'老人',
+						title:'慢性支气管炎',
+						SymptomDescribe:'多年患有慢性支气管炎',
+						SendTime:'2018-06-26 03:49:50',
+						ReplyType:0,
+						ReplyTime:'2018-06-26 12:49:50',
+						ReplyContent:'回复内容',
+						ReplyEvaluate:3
+					},
 				]
 			}
 		},

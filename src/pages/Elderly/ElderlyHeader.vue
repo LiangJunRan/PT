@@ -29,6 +29,10 @@
 					<img src="./img/layout_icon_relative.png" width="48" height="48" style="margin: 6px auto;"/>
 					<span style="color: #FFFFFF;text-align: center;">亲人关怀</span>
 				</li>
+				<li :class="{cur: $route.path.startsWith('/doctorList') }" @click="goElderlyDoctorList()">
+					<img src="./img/layout_icon_doctor.png" width="48" height="48" style="margin: 6px auto;"/>
+					<span style="color: #FFFFFF;text-align: center;">家庭医生</span>
+				</li>
 			</ul>
 		</div>
 		<div class="user" style="float: right;">
@@ -61,6 +65,9 @@ export default{
 		},
 		goElderlyRelative(){
 			this.$router.push({ path: '/relative' })
+		},
+		goElderlyDoctorList(){
+			this.$router.push({ path: '/doctorList' })
 		}
 	}
 }
